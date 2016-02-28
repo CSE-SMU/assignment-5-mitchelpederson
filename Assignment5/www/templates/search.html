@@ -1,0 +1,34 @@
+<ion-view view-title="Search">
+  <ion-content>
+  	<div class="list list-inset">
+  		<label class="item item-input">
+        <span class="input-label">Beer Name</span>
+        <i class="icon ion-search placeholder-icon"></i>
+    		<input type="text" placeholder="Beer Name" ng-model="form.name">    
+  		</label>
+      <label class="item item-input">
+        <span class="input-label">Year</span>
+        <input type="text" placeholder="Leave blank unless looking for specific vintage" ng-model="form.vintage">
+      </label> 
+      <label class="item item-input">
+        <span class="input-label">ABV Range</span>
+        <input type="number" placeholder="Minimum" min="0" max="50" ng-model="form.abvmin">
+        <input type="number" placeholder="Maximum" min="0" max="50" ng-model="form.abvmax">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">IBU Range</span>
+        <input type="number" placeholder="Minimum" min="0" max="1000" ng-model="form.ibumin">
+        <input type="number" placeholder="Maximum" min="0" max="1000" ng-model="form.ibumax">
+      </label>
+      <label class="item item-input">
+        <ion-checkbox ng-model="form.organic">Include only organic</ion-checkbox>
+      </label>
+	</div>
+	
+  </ion-content>
+  <div class="bar bar-footer bar-balanced">
+	<button class="button button-full" ng-click="search()">
+  		Search
+	</button>
+  </div>
+</ion-view>
